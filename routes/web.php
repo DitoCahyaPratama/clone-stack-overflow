@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/list','QuestController@ShowList');
+
+Route::get('/list/create','QuestController@ShowCreate');
+Route::post('/list','QuestController@CreateQuest');
+
+Route::get('/list/{id}', 'QuestController@DetilQuest');
+
+Route::get('/list/{id}/edit', 'QuestController@ShowEdit');
+Route::post('/list/{id}', 'QuestController@EditQuest');
+
+Route::get('/delete/{id}', 'QuestController@DeleteQuest');
