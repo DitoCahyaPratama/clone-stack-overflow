@@ -13,11 +13,11 @@ class QuestController extends Controller
 
     public function ShowList(){
         $data = $this->quest->get();
-        return view ('pages.listquest',compact('data'));
+        return view ('pagesquestion.listquest',compact('data'));
     }
 
     public function ShowCreate(){
-        return view ('pages.create');
+        return view ('pagesquestion.create');
     }
 
     public function CreateQuest(Request $request){
@@ -33,14 +33,14 @@ class QuestController extends Controller
         $data = $this->quest
         ->where('id',$id)
         ->first();
-        return view ('pages.detil',compact('data'));
+        return view ('pagesquestion.detil',compact('data'));
     }
 
     public function ShowEdit($id){
         $data = $this->quest
         ->where('id',$id)
         ->first();
-        return view ('pages.edit',compact('data'));
+        return view ('pagesquestion.edit',compact('data'));
     }
 
     public function EditQuest(Request $request,$id){
