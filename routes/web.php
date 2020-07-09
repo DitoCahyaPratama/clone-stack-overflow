@@ -18,3 +18,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/list','QuestController@ShowList');
+Route::get('/list/create','QuestController@ShowCreate');
+Route::post('/list','QuestController@CreateQuest');
+Route::get('/list/{id}', 'QuestController@DetailQuest');
+Route::get('/list/{id}/edit', 'QuestController@ShowEdit');
+Route::put('/list/{id}', 'QuestController@EditQuest');
+Route::delete('/list/{id}', 'QuestController@DeleteQuest');
