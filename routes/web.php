@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+//Route Answer
 Route::get('/list','QuestController@ShowList');
 Route::get('/list/create','QuestController@ShowCreate');
 Route::post('/list','QuestController@CreateQuest');
@@ -27,3 +27,12 @@ Route::get('/list/{id}', 'QuestController@DetailQuest');
 Route::get('/list/{id}/edit', 'QuestController@ShowEdit');
 Route::put('/list/{id}', 'QuestController@EditQuest');
 Route::delete('/list/{id}', 'QuestController@DeleteQuest');
+
+//Route Answer
+Route::get('/answer','AnswerController@ShowAnswer');
+Route::get('/answer/create','AnswerController@ShowCreate');
+Route::post('/answer','AnswerController@CreateAnswer');
+Route::get('/answer/{id}', 'AnswerController@DetilAnswer');
+Route::get('/answer/{id}/edit', 'AnswerController@ShowEdit');
+Route::put('/answer/{id}', 'AnswerController@EditAnswer');
+Route::delete('/answer/{id}', 'AnswerController@DeleteAnswer');
