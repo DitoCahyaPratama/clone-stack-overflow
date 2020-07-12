@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>List Quest</title>
-</head>
-
-<body>
+@extends('layouts.app')
+@section('content')
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -26,7 +17,7 @@
                                     <th scope="col" class="text-center">Judul</th>
                                     <th scope="col" class="text-center">Isi Pertanyaan</th>
                                     <th scope="col" class="text-center">Tag</th>
-                                    <th scope="col" class="text-center">Action</th>
+                                    <th scope="col" class="text-center" colspan="3">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -60,3 +51,4 @@
 </body>
 
 </html>
+@endsection

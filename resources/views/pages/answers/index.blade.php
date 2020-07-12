@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Answer</title>
-</head>
-<body>
+@extends('layouts.app')
+@section('content')
+
+
     <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -20,7 +15,7 @@
                                 <tr>
                                 <th scope="col" class="text-center">No</th>
                                 <th scope="col" class="text-center">Isi Jawaban</th>
-                                <th scope="col" class="text-center">Action</th>
+                                <th scope="col" class="text-center" colspan="3">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -36,8 +31,8 @@
                                         <form action="/answer/{{$data->id}}" method="post" style="display: inline">
                                             @csrf
                                             @method('DELETE')
-                                                <button type="submit">delete</button>
-                                        </form>
+                                            <button type="submit">delete</button></a>
+                                          </form>
                                     </td>
                                 </tr>
                         @endforeach
@@ -51,3 +46,4 @@
 </div>
 </body>
 </html>
+@endsection
